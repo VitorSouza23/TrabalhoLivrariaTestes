@@ -36,4 +36,14 @@ public class Livro extends AbstractProduto{
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
+    @Override
+    public void exibirInfo() {
+        System.out.println("Livro: " + this.descricao + "\n"
+                + "Código: " + this.codigo + "\n"
+                + "Autor: " + this.autor + "\n"
+                + "Qtd. em Estoque: " + this.quantidadeEstoque + "\n"
+                + "ISBN: " + this.isbn + "\n"
+                + "Preço: " + this.preco +"\n");
+    }
 }

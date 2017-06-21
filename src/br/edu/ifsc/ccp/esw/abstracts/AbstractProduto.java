@@ -101,8 +101,7 @@ public abstract class AbstractProduto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
     
-    public double calcularValorFinal(){
-        return this.preco * this.quantidadeEstoque;
-    }
+    public abstract void exibirInfo();
+    
     
 }

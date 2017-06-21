@@ -5,21 +5,26 @@
  */
 package br.edu.ifsc.ccp.esw.model;
 
+import br.edu.ifsc.ccp.esw.abstracts.AbstractProduto;
+
 /**
  *
  * @author Aluno
  */
-public class Cd {
+public class Cd extends AbstractProduto {
+
     private int numeroFaixas;
 
     public Cd() {
     }
 
-    public Cd(int numeroFaixas) {
+    public Cd(int numeroFaixas, String codigo, String descricao, String autor, int quantidadeEstoque, double preco) {
+        super(codigo, descricao, autor, quantidadeEstoque, preco);
         this.numeroFaixas = numeroFaixas;
     }
-    
-     /**
+
+   
+    /**
      * @return the numeroFaixas
      */
     public int getNumeroFaixas() {
@@ -31,5 +36,15 @@ public class Cd {
      */
     public void setNumeroFaixas(int numeroFaixas) {
         this.numeroFaixas = numeroFaixas;
+    }
+
+    @Override
+    public void exibirInfo() {
+        System.out.println("Livro: " + this.descricao + "\n"
+                + "Código: " + this.codigo + "\n"
+                + "Autor: " + this.autor + "\n"
+                + "Qtd. em Estoque: " + this.quantidadeEstoque + "\n"
+                + "Nº de Faixas: " + this.numeroFaixas + "\n"
+                + "Preço: " + this.preco + "\n");
     }
 }
